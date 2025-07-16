@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-11385223.720037, 2490133.078611, -11384878.131909, 2490334.998416], map.getSize());
+map.getView().fit([-11385212.449885, 2490132.860976, -11384889.928589, 2490335.067806], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -448,11 +448,11 @@ var bottomRightContainerDiv = document.getElementById('bottom-right-container')
 var Title = new ol.control.Control({
     element: (() => {
         var titleElement = document.createElement('div');
-        titleElement.className = 'top-left-title ol-control';
-        titleElement.innerHTML = '<h2 class="project-title">Mapa Coto FNB #87</h2>';
+        titleElement.className = 'bottom-right-title ol-control';
+        titleElement.innerHTML = '<h2 class="project-title">Mapa Coto FNB #87 OpenLayers</h2>';
         return titleElement;
     })(),
-    target: 'top-left-container'
+    target: 'bottom-right-container'
 });
 map.addControl(Title)
     
@@ -855,8 +855,8 @@ if (elementToMove && parentElement) {
 //layer search
 
 var searchLayer = new SearchLayer({
-    layer: lyr_LotesIndividuales_3,
-    colName: 'Cat_prop_N',
+    layer: lyr_LotesIndividuales_4,
+    colName: 'cat_prop_n',
     zoom: 10,
     collapsed: true,
     map: map
